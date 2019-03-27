@@ -7,6 +7,7 @@ import { HelloComponent } from './hello/hello.component';
 import { WorldComponent } from './world/world.component';
 import { ErrorComponent } from './error/error.component';
 import { SmallerWorldComponent } from './smaller-world/smaller-world.component';
+import { CompositContentComponent } from './composit-content/composit-content.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SmallerWorldComponent } from './smaller-world/smaller-world.component';
     HelloComponent,
     WorldComponent,
     ErrorComponent,
-    SmallerWorldComponent
+    SmallerWorldComponent,
+    CompositContentComponent
   ],
   imports: [
     BrowserModule,

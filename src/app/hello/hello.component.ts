@@ -14,7 +14,10 @@ export class HelloComponent implements OnInit {
   }
 
   toggleNavigate() {
-    this.router.navigate(["/world", "Zoolee", {id: 223456}]);
+    this.router.navigate([{outlets: {
+      primary: ['world', 'Zoli', {foo: 'bar'}],
+      compose: ['content']
+    }}]);
   }
 
 }

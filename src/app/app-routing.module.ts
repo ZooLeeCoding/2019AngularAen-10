@@ -4,6 +4,7 @@ import { HelloComponent } from './hello/hello.component';
 import { WorldComponent } from './world/world.component';
 import { ErrorComponent } from './error/error.component';
 import { SmallerWorldComponent } from './smaller-world/smaller-world.component';
+import { CompositContentComponent } from './composit-content/composit-content.component';
 
 const routes: Routes = [
   {path: '', component: HelloComponent},
@@ -12,6 +13,8 @@ const routes: Routes = [
     {path: '', component: ErrorComponent},
     {path: 'smaller', component: SmallerWorldComponent}
   ]},
+
+  {path: 'content', component: CompositContentComponent, outlet: "compose"},
 
   {path: '**', component: ErrorComponent}
 ];
