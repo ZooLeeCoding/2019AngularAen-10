@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-world',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorldComponent implements OnInit {
 
-  constructor() { }
+  name = '';
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.name = params.get('name');
+    })
   }
 
 }

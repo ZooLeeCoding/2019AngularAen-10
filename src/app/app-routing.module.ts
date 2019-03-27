@@ -3,11 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HelloComponent } from './hello/hello.component';
 import { WorldComponent } from './world/world.component';
 import { ErrorComponent } from './error/error.component';
+import { SmallerWorldComponent } from './smaller-world/smaller-world.component';
 
 const routes: Routes = [
   {path: '', component: HelloComponent},
   {path: 'hello', component: HelloComponent},
-  {path: 'world/:name', component: WorldComponent},
+  {path: 'world/:name', component: WorldComponent, children: [
+    {path: '', component: ErrorComponent},
+    {path: 'smaller', component: SmallerWorldComponent}
+  ]},
 
   {path: '**', component: ErrorComponent}
 ];
